@@ -24,19 +24,26 @@ completeBtn.forEach(button => {
         button.classList.remove('bg-[#3752FD]','hover:bg-[#3752FD]','text-white')
         button.classList.add("bg-[#3752FD]", "opacity-30");
 
-        alert('added board')
+        alert('Board Uploded Successfully')
+
+
+        
+       
+        const taskTitle = button.closest(".rounded-lg")?.querySelector(".Title")?.innerText;
+        console.log(taskTitle);
+      //   append Chld
+       const p=document.createElement('p')
+       p.classList.add('bg-[#F4F7FF]','p-2','rounded-md','my-2')
+
+       p.innerText=`You have Complete ${taskTitle} at ${new Date().toLocaleTimeString()}`
+
+       mainList.appendChild(p)
 
         if (clickCount === 6) {
-            alert("This is your 6th click!");
+            alert("Congrats You Have Completed All Task!");
           }
 
-        //   append Chld
-         const p=document.createElement('p')
-         p.classList.add('bg-[#F4F7FF]','p-2','rounded-md','my-2')
 
-         p.innerText=`You have Complete The Task Add Dark Mode at 12:48:15 PM`
-
-         mainList.appendChild(p)
 
     })
 });
