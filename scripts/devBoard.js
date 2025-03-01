@@ -44,3 +44,4 @@ completeBtn.forEach(button => {
 document.getElementById('clear-btn').addEventListener('click',function(){
     mainList.innerHTML=``
 })
+
