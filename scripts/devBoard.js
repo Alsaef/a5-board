@@ -32,7 +32,7 @@ completeBtn.forEach(button => {
         const taskTitle = button.closest(".rounded-lg")?.querySelector(".Title")?.innerText;
         console.log(taskTitle);
       //   append Chld
-       const p=document.createElement('p')
+        const p=document.createElement('p')
        p.classList.add('bg-[#F4F7FF]','p-2','rounded-md','my-2')
 
        p.innerText=`You have Complete ${taskTitle} at ${new Date().toLocaleTimeString()}`
@@ -52,3 +52,6 @@ document.getElementById('clear-btn').addEventListener('click',function(){
     mainList.innerHTML=``
 })
 
+document.getElementById('blog-page-id').addEventListener('click',function(){
+  window.location.href='blog.html'
+})
